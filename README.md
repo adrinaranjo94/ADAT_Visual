@@ -276,3 +276,16 @@ this._iberia.getVuelosIberia(this.origen,this.destino).subscribe();
 ```
 Nos suscribimos para observar los cambios de los datos que recibimos del servidor.
 
+# DESHABILITAR SEGURIDAD DE RESTRICCIONES DE ORIGEN CRUZADO
+
+- Para poder arreglar el problema de seguridad que impide acceder a otros dominios locales, tenemos que desactivar en opciones del navegador las restricciones de origen cruzado.
+
+Sin ello no podriamos acceder al servidor.
+
+Esta web app esta en desarrollo por lo que no se ha pasado a producción. Para poder utilizarla debemos lanzar el comando:
+```
+ng serve
+````
+
+En caso de haber algun fallo, seguir las indicaciones del terminal.
+
