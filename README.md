@@ -1,7 +1,15 @@
 # ADAT_Visual
 Proyecto de investigación ADAT en el que se realiza una aplicacion web MEAN (MongoDB,ExpressJS,AngularJS,NodeJS)
 
-#Parte visual
+Parte de Backend realizada en el siguiente git: https://github.com/SergioRedondoMontes/API_NodeJS_Mongo.git
+
+PROYECTO REALIZADO POR:
+
+- Adrian Naranjo https://github.com/adrinaranjo94
+- Sergio Redondo https://github.com/SergioRedondoMontes
+- Oscar de la Fuente https://github.com/Gringo97
+
+# Parte visual
 
 ## Para llevar a cabo la parte visual de la aplicacion web, debemos tener instalado Angular-CLI.
 
