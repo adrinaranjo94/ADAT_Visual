@@ -1,0 +1,24 @@
+<div class="container-fluid top100"></div>
+<div class="container">
+  <div class="puntero jumbotron" *ngFor="let vuelo of vuelo">
+    <p>Origen: {{vuelo.origen}}</p>
+    <p>Destino: {{vuelo.destino}}</p>
+    <hr>
+    <p>Plazas disponibles: {{vuelo.plazas_disponibles}}</p>
+    <p>Plazas totales: {{vuelo.plazas_totales}}</p>
+    <p>{{vuelo.precio | currency:'EUR':true:'.2-2'}}</p>
+    <br>
+    <br>
+    <p>Introduce nº de entradas</p>
+    <div class="container">
+      <div class="row">
+          <input type="number" class="form-control col-6" id="plazas"> -> <p id="precioTotal" (keyup)="getPrecioTotal()"></p>
+          
+      </div>
+    </div>
+    
+    <div class="text-center">
+      <button class="btn btn-primary">Realizar reserva</button>
+    </div>
+  </div> 
+</div>

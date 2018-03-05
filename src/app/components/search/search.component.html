@@ -1,0 +1,40 @@
+<div class="container-fluid top100">
+  <div class="jumbotron">
+    <h1 class="display-4">Comparador de Vuelos!</h1>
+    <p class="lead">¡Ha llegado el mejor comparado de vuelos!</p>
+    <hr class="my-4">
+    <p>Rápido, facil e intuitivo</p>
+    <form class="row">
+      <input type="text" name="" id="origen" placeholder="Introduce origen" class="form-control col-5">
+      <button type="button" (click)="changeField()" class="btn btn-primary col-2"><i class="fas fa-exchange-alt"></i></button>
+      <input type="text" name="" id="destino" placeholder="Introduce destino" class="form-control col-5">
+      <button type="button" class="btn btn-primary col-12 my-2" (click)="buscar()">BUSCAR</button>
+    </form>
+  </div>
+  <div class="container-fluid" *ngIf="mostrar">
+    <div class="row">
+      <div class="col-12 col-md-4 contFiltro">
+        <h4>Filtrar por:</h4>
+        <input type="checkbox" name="filtro" (click)="filterCompany()">Compañia
+        <input type="checkbox" name="filtro" (click)="filterPrice()">Precio
+      </div>
+
+      <div class="col-12 col-md-8 contVuelos text-center">
+        <h4>MOSTRANDO VUELOS DE {{origen | uppercase}} A {{destino | uppercase}} </h4>
+        <div class="container">
+            <div class="alert alert-info" role="alert" *ngIf="vuelosDisponibles.length==0">
+                No existen resultados con el término: {{termino}}
+            </div>
+            <div *ngIf="vuelosDisponibles.length!=0">
+              <div class="text-center puntero vuelo" *ngFor="let vuelo of _iberia.vuelos" [routerLink]="['/vuelo',vuelo.num_vuelo]">
+                <p>{{vuelo.origen}}</p>
+                <p>{{vuelo.destino}}</p>
+                <hr>
+                <p>{{vuelo.precio | currency:'EUR':true:'.2-2'}}</p>
+              </div> 
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
